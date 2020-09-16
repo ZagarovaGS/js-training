@@ -106,12 +106,3 @@ function quadraticEquation(a, b, c){
    
 quadraticEquation(3, 4, 10);
 
-//Задание 6
-
-function getCalendar(year, month){
-    const date = newDate;
-    for (let i=1; i<30; i++) {
-        newDate+=date;
-        console.log([i]);
-    }
-}
