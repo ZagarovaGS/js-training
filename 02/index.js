@@ -52,3 +52,20 @@ function deleteChars(str){
 
 //document.write(deleteChars("hello"));
 // не знаю, как правильно передать в функцию(
+
+
+// Задаеие 5
+
+function convertFloor(floor){
+    if (floor === 13){
+        alert ("Такого этажа нет.");
+    }
+    if (floor < 0){
+        return floor;
+    }
+    else if (floor >= 0){
+    let realFloor = floor + 1;
+    return realFloor; 
+    }            
+}
+  document.write( convertFloor(0));
