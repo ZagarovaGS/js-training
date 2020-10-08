@@ -1,7 +1,7 @@
 body{
     background-color: #2F3485;
 }
-#container{
+.container{
     display: inline-block;
     background-image: url(img/picture2.jpg);
     margin-top: 50px;
@@ -12,16 +12,7 @@ body{
     padding: 50px;
 }
 
-#container2{
-    display: inline-block;
-    background-image: url(img/picture2.jpg);
-    margin-top: 50px;
-    margin-left: 50px;
-    text-align: center;
-    font-size: 30px;
-    color: #2F3485 ;
-    padding: 50px;
-}
+
 .invalid{
     border: 4px solid red;
 }
@@ -92,4 +83,7 @@ body{
 }
 p{   
     font-size: 20px;
+}
+.active-btn{
+    background-attachment: blue;
 }

@@ -7,24 +7,31 @@
     <link rel="stylesheet" type="text/css" href="form.css">
 </head>
 <body>
-     <div id ="container">
-        <input  type = "text" id = "email"><br>
-        <input  type = "text" id = "password"><br>
-        <button id = "login">login</button><br>
-        <div id = "message"></div>
-     </div> 
+     <div class ="container">
+        <div class= "buttons">
+            <button id = "setLoginBtn">login</button>
+            <button id = "setRegisterBtn">Register</button>
+        </div>
+
+        <form id = "loginForm">
+        <input  type = "email" placeholder = "email" id = "email" autofocus><br>
+        <input  type = "paasword" placeholder="password" id = "password"><br>
+        <botton id = "loginBtn">Submit</button><br>
+        </form>
      
-     <div id ="container2">
+     
         <form id = "registerForm" name = "register" novalidate>           
-        <input  type = "text" name = "login"  placeholder = "Login" id = "loginInput"><br>  
-        <input  type = "text" name = "name"  placeholder = "Name" id = "nameInput"><br>
-        <input  type = "number" name = "age" placeholder = "Age" id = "ageInput"><br>   
-        <input  type = "email" name = "email"  placeholder = "Email" id = "emailInput"><br>
-        <input  type = "text" name = "city"  placeholder = "City" id = "cityInput"><br>
-        <input  type = "password" name = "password"  placeholder = "Password" id = "passwordInput"><br>
-        <input  type = "password" name = "repeatPassword" placeholder = RepeatPassword id = "repeatPasswordInput"><br>
+        <input  type = "text" name = "login"  placeholder = "Login" id = "login"><br>  
+        <input  type = "text" name = "name"  placeholder = "Name" id = "name"><br>
+        <input  type = "number" name = "age" placeholder = "Age" id = "age"><br>   
+        <input  type = "email" name = "email"  placeholder = "Email" id = "email"><br>
+        <input  type = "text" name = "city"  placeholder = "City" id = "city"><br>
+        <input  type = "password" name = "password"  placeholder = "Password" id = "password"><br>
+        <input  type = "password" name = "repeatPassword" placeholder = RepeatPassword id = "repeatPassword"><br>
         <button id = "btn">Regisier</button><br>
+        <div class="meaasage"></div>
     </form>
+    </div>
 </div>   
 <script type="module" src="form.js"></script>
 </body>

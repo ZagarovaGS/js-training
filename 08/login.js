@@ -29,7 +29,7 @@ console.log(input2);
 
  
 
- buttom.addEventListener("click", function(event){
+ btn.addEventListener("click", function(event){
 
     let myEmail = document.querySelector("#email").value;
     let myPassword = document.querySelector("#password").value;
@@ -50,9 +50,9 @@ console.log(input2);
     })
     function setDisableButtonState(){
         if (email.value === "" || password.value === ""){
-        buttom.disabled = true;
+        btn.disabled = true;
     } else {
-        buttom.disabled = false;  
+        btn.disabled = false;  
     }
     }
     return {loginForm, setDisableButtonState};

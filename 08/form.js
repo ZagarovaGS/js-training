@@ -6,14 +6,40 @@ const buttom = document.getElementById("login");
 const div = document.getElementById("message");
 
 const {loginForm, setDisableButtonState} = initLogin();
-INVALID_CLASS = "invalid";
+//INVALID_CLASS = "invalid";
 
 
 const form = document.forms.registerForm;
 const btn = document.getElementById("btn");
 
 document.getElementById("container");
+document.getElementById("loginForm");
 document.getElementById("registerForm");
 
 const {RegisterForm, setDisableButtonState2} = initRegister();
 
+const setLoginBtn = document.getElementById("setLoginBtn");
+const setRegisterBtn = document.getElementById("setRegisterBtn");
+
+setLoginFormActive();
+
+function setLoginFormActive(){
+    loginForm.style.display = "block";
+    registerForm.style.display = "none";
+    setLoginBtn.classList.add("active-btn");
+    setRegisterBtn.classList.remove("active-btn");
+    setDisableButtonState();
+}
+
+
+function setRegisterFormActive(){
+    loginForm.style.display = "none";
+    registerForm.style.display = "block";
+    setLoginBtn.classList.remove("active-btn");
+    setRegisterBtn.classList.add("active-btn");
+    //btn.disabled = !formHelper.checkFormValidation();
+}
+ //loginForm
+ setLoginBtn.addEventListener("click", setLoginFormActive);
+
+ setRegisterBtn.addEventListener("click", setRegisterFormActive);
