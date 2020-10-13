@@ -11,7 +11,7 @@ export function initRegister(){
            value: "",
            valid: false,
            checkValidation(){
-            this.login.valid = this.login.value.match(/,|\./g);
+            this.login.valid = this.login.value.match(/,|\./);
             
             }
        },
@@ -91,7 +91,7 @@ export function initRegister(){
         const bindedValidator = formHelper[name].checkValidation.bind(formHelper);
         bindedValidator();
     
-        btn.disabled = !formHelper.checkFormValidation();
+        registerBtn.disabled = !formHelper.checkFormValidation();
         console.log(formHelper);
         console.log(btn);
         handleClassAdding(event.target, formHelper[name].valid);

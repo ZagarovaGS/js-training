@@ -1,8 +1,9 @@
 export function initLogin(){
 
-const input = document.getElementById("email");
-const buttom = document.getElementById("login");
+const input = document.getElementById("emailInput");
 const div = document.getElementById("message");
+const input2 = document.getElementById("passwordInput");
+const button = document.getElementById("loginBtn");
 
 const user = {
     email: "222@mail.ru",
@@ -12,7 +13,7 @@ const user = {
 
 input.addEventListener("input", (event) =>{
     const isValid = event.target.value;
-    if (!isValid){
+    if (!isValid.match(/\b[A-z0-9._%+-]+@[A-z0-9]+\.[A-z]+\b/)){
        event.target.classList.add("invalid");
     } else{
     event.target.classList.remove("invalid"); 
@@ -20,25 +21,29 @@ input.addEventListener("input", (event) =>{
     console.log(isValid);
 });
 
-
- const input2 = document.getElementById("password");
  input2.addEventListener("input", (event) =>{
     const isValid = event.target.value;
+    if (!isValid){
+        event.target.classList.add("invalid");
+     } else{
+     event.target.classList.remove("invalid"); 
+     }
  })
 console.log(input2);
 
- 
 
- btn.addEventListener("click", function(event){
 
-    let myEmail = document.querySelector("#email").value;
-    let myPassword = document.querySelector("#password").value;
+ button.addEventListener("click", function(event) {
+    //preventDefault();
+    let myEmail = document.querySelector("#emailInput").value;
+    let myPassword = document.querySelector("#passwordInput").value;
    
 
     if (myEmail && myPassword){
        console.log(user);
         if (myEmail === user.email && myPassword === user.password){   
-            div.innerText = `Hello, ${user.name}` ;    
+            div.innerText = `Hello, ${user.name}` ; 
+            setDisableButtonState()  
     }
         else if (myEmail !== user.email || myPassword !== user.password) {
             
@@ -47,13 +52,15 @@ console.log(input2);
     }    
        else setDisableButtonState();
     
-    })
+    });
+
     function setDisableButtonState(){
-        if (email.value === "" || password.value === ""){
-        btn.disabled = true;
+        if (emailInput.value === "" || passwordInput.value === ""){
+        button.disabled = true;
     } else {
-        btn.disabled = false;  
+        button.disabled = false;  
     }
     }
-    return {loginForm, setDisableButtonState};
+    
+        return {loginForm, setDisableButtonState};
 }

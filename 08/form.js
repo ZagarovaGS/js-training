@@ -1,22 +1,17 @@
 import {INVALID_CLASS} from "./constans.js";
 import {initLogin} from "./login.js";
 import {initRegister} from "./register.js";
-const input = document.getElementById("email");
-const buttom = document.getElementById("login");
-const div = document.getElementById("message");
+
 
 const {loginForm, setDisableButtonState} = initLogin();
-//INVALID_CLASS = "invalid";
 
 
-const form = document.forms.registerForm;
-const btn = document.getElementById("btn");
 
 document.getElementById("container");
 document.getElementById("loginForm");
 document.getElementById("registerForm");
 
-const {RegisterForm, setDisableButtonState2} = initRegister();
+const {registerForm, setDisableButtonState2} = initRegister();
 
 const setLoginBtn = document.getElementById("setLoginBtn");
 const setRegisterBtn = document.getElementById("setRegisterBtn");
@@ -28,7 +23,7 @@ function setLoginFormActive(){
     registerForm.style.display = "none";
     setLoginBtn.classList.add("active-btn");
     setRegisterBtn.classList.remove("active-btn");
-    setDisableButtonState();
+    //setDisableButtonState();
 }
 
 
@@ -37,8 +32,9 @@ function setRegisterFormActive(){
     registerForm.style.display = "block";
     setLoginBtn.classList.remove("active-btn");
     setRegisterBtn.classList.add("active-btn");
-    //btn.disabled = !formHelper.checkFormValidation();
+    //registerBtn.disabled = !formHelper.checkFormValidation();
 }
+
  //loginForm
  setLoginBtn.addEventListener("click", setLoginFormActive);
 
